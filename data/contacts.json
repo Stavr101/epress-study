@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Alexey Petrov",
+    "phone": "+1-202-111-2233",
+    "email": "a.petrov@example.com",
+    "company": "TechVision",
+    "position": "Developer"
+  },
+  {
+    "id": 2,
+    "name": "Maria Smirnova",
+    "phone": "+1-202-222-3344",
+    "email": "m.smirnova@example.com",
+    "company": "FinGroup",
+    "position": "Analyst"
+  },
+  {
+    "id": 3,
+    "name": "Ivan Volkov",
+    "phone": "+1-202-333-4455",
+    "email": "i.volkov@example.com",
+    "company": "SoftLine",
+    "position": "Project Manager"
+  },
+  {
+    "id": 4,
+    "name": "Olga Alexeeva",
+    "phone": "+1-202-444-5566",
+    "email": "o.alexeeva@example.com",
+    "company": "GreenTech",
+    "position": "Marketing Specialist"
+  },
+  {
+    "id": 5,
+    "name": "Dmitry Kuznetsov",
+    "phone": "+1-202-555-6677",
+    "email": "d.kuznetsov@example.com",
+    "company": "AutoPro",
+    "position": "Engineer"
+  },
+  {
+    "id": 6,
+    "name": "Elena Frolova",
+    "phone": "+1-202-666-7788",
+    "email": "e.frolova@example.com",
+    "company": "SkyMedia",
+    "position": "Designer"
+  },
+  {
+    "id": 7,
+    "name": "Maxim Orlov",
+    "phone": "+1-202-777-8899",
+    "email": "m.orlov@example.com",
+    "company": "CloudSoft",
+    "position": "DevOps Engineer"
+  },
+  {
+    "id": 8,
+    "name": "Anna Sergeeva",
+    "phone": "+1-202-888-9900",
+    "email": "a.sergeeva@example.com",
+    "company": "MarketLab",
+    "position": "Product Manager"
+  },
+  {
+    "id": 9,
+    "name": "Pavel Nikitin",
+    "phone": "+1-202-999-0011",
+    "email": "p.nikitin@example.com",
+    "company": "CyberNet",
+    "position": "System Administrator"
+  },
+  {
+    "id": 10,
+    "name": "Ksenia Belova",
+    "phone": "+1-202-101-2030",
+    "email": "k.belova@example.com",
+    "company": "SalesPro",
+    "position": "Sales Manager"
+  },
+  {
+    "id": 11,
+    "name": "Andrey Savin",
+    "phone": "+1-202-111-0022",
+    "email": "a.savin@example.com",
+    "company": "DataFlow",
+    "position": "Data Scientist"
+  },
+  {
+    "id": 12,
+    "name": "Tatyana Romanova",
+    "phone": "+1-202-121-2121",
+    "email": "t.romanova@example.com",
+    "company": "EduTech",
+    "position": "Education Specialist"
+  },
+  {
+    "id": 13,
+    "name": "Sergey Korneev",
+    "phone": "+1-202-131-3131",
+    "email": "s.korneev@example.com",
+    "company": "LogiCorp",
+    "position": "Logistics Manager"
+  },
+  {
+    "id": 14,
+    "name": "Natalia Gromova",
+    "phone": "+1-202-141-4141",
+    "email": "n.gromova@example.com",
+    "company": "BeautyLine",
+    "position": "SMM Specialist"
+  },
+  {
+    "id": 15,
+    "name": "Vladimir Sokolov",
+    "phone": "+1-202-151-5151",
+    "email": "v.sokolov@example.com",
+    "company": "BuildTech",
+    "position": "Architect"
+  },
+  {
+    "id": 16,
+    "name": "Alena Chernova",
+    "phone": "+1-202-161-6161",
+    "email": "a.chernova@example.com",
+    "company": "HealthPro",
+    "position": "HR Manager"
+  },
+  {
+    "id": 17,
+    "name": "Georgy Laptev",
+    "phone": "+1-202-171-7171",
+    "email": "g.laptev@example.com",
+    "company": "SmartAI",
+    "position": "ML Engineer"
+  },
+  {
+    "id": 18,
+    "name": "Sofia Antonova",
+    "phone": "+1-202-181-8181",
+    "email": "s.antonova@example.com",
+    "company": "TravelGo",
+    "position": "Travel Manager"
+  },
+  {
+    "id": 19,
+    "name": "Konstantin Mirov",
+    "phone": "+1-202-191-9191",
+    "email": "k.mirov@example.com",
+    "company": "ArtVision",
+    "position": "Illustrator"
+  },
+  {
+    "id": 20,
+    "name": "Veronika Yartseva",
+    "phone": "+1-202-202-0202",
+    "email": "v.yartseva@example.com",
+    "company": "FoodLab",
+    "position": "Food Technologist"
+  }
+]
