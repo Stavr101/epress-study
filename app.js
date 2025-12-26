@@ -12,26 +12,24 @@ app.get("/", (req, resp) => {
   resp.json("<h2>Home page</h2>");
 });
 
-// app.get("/api/contacts/", (req, resp) => {
-//   console.log(contacts);
-//   resp.json(contacts);
-// });
+app.get("/api/contacts/", (req, resp) => {
+  // console.log(contacts);
+  resp.json(contacts);
+});
 
-// app.get("/api/contacts/:id", () => {});
+app.get("/api/contacts/:id", () => {});
 
-app.get("/api/books/", (req, resp) => {
-  // console.log(books);
-  const result = apiBooks.getAll();
+app.get("/api/books/", async (req, resp) => {
+  const result = await apiBooks.getAll();
+
   resp.json(result);
 });
 
-app.get("/api/books/:id", (req, resp) => {
-  console.log(req);
+app.get("/api/books/:id", async (req, resp) => {
+  const { id } = req.params;
+  // console.log("id", id);
 
-  const id = req.params;
-  console.log("id", id);
-
-  const result = apiBooks.getById(id);
+  const result = await apiBooks.getById(id);
   resp.json(result);
 });
 

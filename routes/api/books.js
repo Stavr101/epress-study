@@ -5,8 +5,10 @@ const booksPath = path.join(__dirname, "../../books/books.json");
 console.log(booksPath);
 
 const getAll = async () => {
-  const data = await fs.readFile(booksPath);
-  return JSON.parse(date);
+  const data = await fs.readFile(booksPath, "utf-8");
+  console.log("data", data);
+
+  return JSON.parse(data);
 };
 
 const getById = async (id) => {
@@ -19,10 +21,10 @@ const addBook = async (data) => {
   const books = await getAll();
   const newBook = {
     id: nanoid(),
-    ...date,
+    ...data,
   };
   books.push(newBook);
-  await fs.writeFile(booksPath, JSON.stringify(books, 2, null));
+  await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
   return newBook;
 };
 
@@ -34,7 +36,7 @@ const updateById = async (id, data) => {
   }
 
   books[index] = { id, ...data };
-  await fs.writeFile(booksPath, JSON.stringify(books, 2, null));
+  await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
   return books[index];
 };
 
