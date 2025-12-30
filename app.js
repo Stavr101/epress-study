@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("colors");
 
 const app = express(); //web-server///
 // const books = require("./books/books");
@@ -46,5 +47,5 @@ app.delete("/api/books/:id", (req, resp) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server running ot the port 3000");
+  console.log(`Server running ot the port 3000`.cyan.bold.italic);
 });

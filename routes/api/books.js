@@ -6,14 +6,14 @@ console.log(booksPath);
 
 const getAll = async () => {
   const data = await fs.readFile(booksPath, "utf-8");
-  console.log("data", data);
 
   return JSON.parse(data);
 };
 
 const getById = async (id) => {
   const books = await getAll();
-  const result = books.find((item) => item.id === id);
+
+  const result = books.find((item) => item.id === Number(id));
   return result || null;
 };
 
