@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "1984",
     "author": "George Orwell",
     "year": 1949,
@@ -8,7 +8,7 @@
     "isbn": "978-0451524935"
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "year": 1960,
@@ -16,7 +16,7 @@
     "isbn": "978-0061120084"
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "year": 1925,
@@ -24,7 +24,7 @@
     "isbn": "978-0743273565"
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "Moby-Dick",
     "author": "Herman Melville",
     "year": 1851,
@@ -32,7 +32,7 @@
     "isbn": "978-1503280786"
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "year": 1813,
@@ -40,7 +40,7 @@
     "isbn": "978-1503290563"
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "War and Peace",
     "author": "Leo Tolstoy",
     "year": 1869,
@@ -48,7 +48,7 @@
     "isbn": "978-1420952433"
   },
   {
-    "id": 7,
+    "id": "7",
     "title": "Crime and Punishment",
     "author": "Fyodor Dostoevsky",
     "year": 1866,
@@ -56,7 +56,7 @@
     "isbn": "978-1505255600"
   },
   {
-    "id": 8,
+    "id": "8",
     "title": "The Catcher in the Rye",
     "author": "J.D. Salinger",
     "year": 1951,
@@ -64,7 +64,7 @@
     "isbn": "978-0316769488"
   },
   {
-    "id": 9,
+    "id": "9",
     "title": "Brave New World",
     "author": "Aldous Huxley",
     "year": 1932,
@@ -72,7 +72,7 @@
     "isbn": "978-0060850524"
   },
   {
-    "id": 10,
+    "id": "10",
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "year": 1937,
@@ -80,7 +80,7 @@
     "isbn": "978-0547928227"
   },
   {
-    "id": 11,
+    "id": "11",
     "title": "Fahrenheit 451",
     "author": "Ray Bradbury",
     "year": 1953,
@@ -88,7 +88,7 @@
     "isbn": "978-1451673319"
   },
   {
-    "id": 12,
+    "id": "12",
     "title": "The Odyssey",
     "author": "Homer",
     "year": "8th century BC",
@@ -96,7 +96,7 @@
     "isbn": "978-0140268867"
   },
   {
-    "id": 13,
+    "id": "13",
     "title": "Don Quixote",
     "author": "Miguel de Cervantes",
     "year": 1605,
@@ -104,7 +104,7 @@
     "isbn": "978-0060934347"
   },
   {
-    "id": 14,
+    "id": "14",
     "title": "The Divine Comedy",
     "author": "Dante Alighieri",
     "year": "1320",
@@ -112,7 +112,7 @@
     "isbn": "978-0142437223"
   },
   {
-    "id": 15,
+    "id": "15",
     "title": "The Brothers Karamazov",
     "author": "Fyodor Dostoevsky",
     "year": 1880,
@@ -120,7 +120,7 @@
     "isbn": "978-0374528379"
   },
   {
-    "id": 16,
+    "id": "16",
     "title": "The Lord of the Rings",
     "author": "J.R.R. Tolkien",
     "year": 1954,
@@ -128,7 +128,7 @@
     "isbn": "978-0618640157"
   },
   {
-    "id": 17,
+    "id": "17",
     "title": "Anna Karenina",
     "author": "Leo Tolstoy",
     "year": 1877,
@@ -136,7 +136,7 @@
     "isbn": "978-1853262715"
   },
   {
-    "id": 18,
+    "id": "18",
     "title": "The Picture of Dorian Gray",
     "author": "Oscar Wilde",
     "year": 1890,
@@ -144,7 +144,7 @@
     "isbn": "978-0141439570"
   },
   {
-    "id": 19,
+    "id": "19",
     "title": "The Trial",
     "author": "Franz Kafka",
     "year": 1914,
@@ -152,7 +152,7 @@
     "isbn": "978-0805209990"
   },
   {
-    "id": 20,
+    "id": "20",
     "title": "Slaughterhouse-Five",
     "author": "Kurt Vonnegut",
     "year": 1969,

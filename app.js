@@ -4,8 +4,11 @@ require("colors");
 
 const app = express(); //web-server///
 // const books = require("./books/books");
-const contacts = require("./data/contacts.json");
-const apiBooks = require("./routes/api/books");
+
+// const contacts = require("./data/contacts.json");
+// const apiBooks = require("./routes/api/books");
+const contactsModel = require("./routes/models/modelsContacts");
+const booksModel = require("./routes/models/modelsBooks");
 
 app.use(cors());
 
@@ -14,23 +17,24 @@ app.get("/", (req, resp) => {
 });
 
 app.get("/api/contacts/", (req, resp) => {
-  // console.log(contacts);
-  resp.json(contacts);
+  const getAllContacts = async (req, res) => {
+    const contacts = await contactsModel.getAll();
+    res.json(contacts);
+  };
 });
 
 app.get("/api/contacts/:id", () => {});
 
 app.get("/api/books/", async (req, resp) => {
-  const result = await apiBooks.getAll();
+  const result = await booksModel.getAll();
 
   resp.json(result);
 });
 
 app.get("/api/books/:id", async (req, resp) => {
   const { id } = req.params;
-  // console.log("id", id);
 
-  const result = await apiBooks.getById(id);
+  const result = await booksModel.getById(id);
   resp.json(result);
 });
 
