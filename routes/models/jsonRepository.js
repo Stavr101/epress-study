@@ -4,7 +4,7 @@ const { nanoId } = require("nanoid");
 const createRepositories = (filePath) => {
   const getAll = async () => {
     const data = await fs.readFile(filePath, "utf-8");
-    return JSON.parse(date);
+    return JSON.parse(data);
   };
 
   const getById = async (id) => {

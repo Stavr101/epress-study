@@ -16,19 +16,17 @@ app.get("/", (req, resp) => {
   resp.json("<h2>Home page</h2>");
 });
 
-app.get("/api/contacts/", (req, resp) => {
-  const getAllContacts = async (req, res) => {
-    const contacts = await contactsModel.getAll();
-    res.json(contacts);
-  };
+app.get("/api/contacts/", async (req, resp) => {
+  const contacts = await contactsModel.getAll();
+  resp.json(contacts);
 });
 
 app.get("/api/contacts/:id", () => {});
 
 app.get("/api/books/", async (req, resp) => {
-  const result = await booksModel.getAll();
+  const books = await booksModel.getAll();
 
-  resp.json(result);
+  resp.json(books);
 });
 
 app.get("/api/books/:id", async (req, resp) => {
