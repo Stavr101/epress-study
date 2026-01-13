@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const booksService = require("../models/books");
-const ctrl = require("../controllers/crudController");
+// const booksService = require("../models/books");
+// const ctrl = require("../../controllers/crudController");
+
+const createRepositories = require("../models/jsonRepository");
 
 router.get("/", ctrl.getAll(booksService));
 router.get("/:id", ctrl.getById(booksService));

@@ -1,3 +1,4 @@
+// const { log } = require("console");
 const fs = require("fs/promises");
 const { nanoId } = require("nanoid");
 
@@ -8,8 +9,10 @@ const createRepositories = (filePath) => {
   };
 
   const getById = async (id) => {
+    console.log("id", id);
+
     const data = await getAll();
-    const result = data.find((item) => item.id === id);
+    const result = data.find((item) => String(item.id) === String(id));
     return result || null;
   };
   const add = async (data) => {
