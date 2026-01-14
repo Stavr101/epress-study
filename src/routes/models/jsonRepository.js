@@ -9,7 +9,7 @@ const createRepositories = (filePath) => {
   };
 
   const getById = async (id) => {
-    console.log("id", id);
+    // console.log("id", id);
 
     const data = await getAll();
     const result = data.find((item) => String(item.id) === String(id));

@@ -1,60 +1,30 @@
-// const fs = require("fs/promises");
-// const { nanoid } = require("nanoid");
-// const path = require("path");
-// const booksPath = path.join(__dirname, "../../books/books.json");
-// console.log(booksPath);
+const express = require("express");
+const booksModel = require("../models/modelsBooks");
 
-// const getAll = async () => {
-//   const data = await fs.readFile(booksPath, "utf-8");
+const router = express.Router();
 
-//   return JSON.parse(data);
-// };
+router.get("/", async (req, resp) => {
+  const books = await booksModel.getAll();
+  resp.json(books);
+});
 
-// const getById = async (id) => {
-//   const books = await getAll();
+router.get("/:id", async (req, resp) => {
+  const { id } = req.params;
 
-//   const result = books.find((item) => item.id === id);
-//   return result || null;
-// };
+  const result = await booksModel.getById(id);
+  resp.json(result);
+});
 
-// const addBook = async (data) => {
-//   const books = await getAll();
-//   const newBook = {
-//     id: nanoid(),
-//     ...data,
-//   };
-//   books.push(newBook);
-//   await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
-//   return newBook;
-// };
+router.post("/", (req, resp) => {
+  resp.json(books);
+});
 
-// const updateById = async (id, data) => {
-//   const books = await getAll();
-//   const index = books.findIndex((item) => item.id === id);
-//   if (index === -1) {
-//     return null;
-//   }
+router.put("/:id", (req, resp) => {
+  resp.json(books);
+});
 
-//   books[index] = { id, ...data };
-//   await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
-//   return books[index];
-// };
+router.delete("/:id", (req, resp) => {
+  resp.json(books);
+});
 
-// const deleteById = async (id) => {
-//   const books = await getAll();
-//   const index = books.findIndex((item) => item.id === id);
-//   if (index === -1) {
-//     return null;
-//   }
-//   const [result] = books.splice(index, 1);
-//   await fs.writeFile(booksPath, JSON.stringify(books, 2, null));
-//   return result;
-// };
-
-// module.exports = {
-//   getAll,
-//   getById,
-//   addBook,
-//   updateById,
-//   deleteById,
-// };
+module.exports = router;

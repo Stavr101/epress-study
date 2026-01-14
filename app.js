@@ -4,49 +4,20 @@ require("colors");
 
 const app = express(); //web-server///
 
-const contactsModel = require("./src/routes/models/modelsContacts");
-const booksModel = require("./src/routes/models/modelsBooks");
+const booksRouter = require("./src/routes/api/books");
+const contactsRouter = require("./src/routes/api/contacts");
 
 app.use(cors());
-
+app.use("/api/books", booksRouter);
+app.use("/api/contacts", contactsRouter);
 app.get("/", (req, resp) => {
   resp.json("<h2>Home page</h2>");
 });
 
-app.get("/api/contacts/", async (req, resp) => {
-  const contacts = await contactsModel.getAll();
-  resp.json(contacts);
-});
-
-app.get("/api/contacts/:id", async (req, resp) => {
-  const { id } = req.params;
-  const result = await contactsModel.getById(id);
-  resp.json(result);
-});
-
-app.get("/api/books/", async (req, resp) => {
-  const books = await booksModel.getAll();
-
-  resp.json(books);
-});
-
-app.get("/api/books/:id", async (req, resp) => {
-  const { id } = req.params;
-
-  const result = await booksModel.getById(id);
-  resp.json(result);
-});
-
-app.post("/api/books", (req, resp) => {
-  resp.json(books);
-});
-
-app.put("/api/books/:id", (req, resp) => {
-  resp.json(books);
-});
-
-app.delete("/api/books/:id", (req, resp) => {
-  resp.json(books);
+app.use((req, resp) => {
+  resp.status(404).json({
+    message: "Not found",
+  });
 });
 
 app.listen(3000, () => {
