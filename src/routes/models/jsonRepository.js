@@ -1,6 +1,6 @@
 // const { log } = require("console");
 const fs = require("fs/promises");
-const { nanoId } = require("nanoid");
+const { nanoid } = require("nanoid");
 
 const createRepositories = (filePath) => {
   const getAll = async () => {
@@ -18,22 +18,22 @@ const createRepositories = (filePath) => {
   const add = async (data) => {
     const items = await getAll();
     const newItem = {
-      id: nanoId(),
+      id: nanoid(),
       ...data,
     };
     items.push(newItem);
     await fs.writeFile(filePath, JSON.stringify(items, null, 2));
     return newItem;
   };
-  const updateById = async (id) => {
-    const data = await getAll();
-    const index = data.findIndex((item) => item.id === id);
+  const updateById = async (id, data) => {
+    const result = await getAll();
+    const index = result.findIndex((item) => item.id === id);
     if (index === -1) {
       return null;
     }
-    data[index] = { id, ...data };
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
-    return data[index];
+    result[index] = { id, ...data };
+    await fs.writeFile(filePath, JSON.stringify(books, null, 2));
+    return result[index];
   };
 
   const deleteById = async (id) => {

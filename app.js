@@ -8,6 +8,8 @@ const booksRouter = require("./src/routes/api/books");
 const contactsRouter = require("./src/routes/api/contacts");
 
 app.use(cors());
+app.use(express.json());
+
 app.use("/api/books", booksRouter);
 app.use("/api/contacts", contactsRouter);
 app.get("/", (req, resp) => {
@@ -18,6 +20,11 @@ app.use((req, resp) => {
   resp.status(404).json({
     message: "Not found",
   });
+});
+
+app.use((err, req, resp, next) => {
+  const { status = 500, message = "Server error" } = err;
+  resp.status(status).json({ message });
 });
 
 app.listen(3000, () => {
