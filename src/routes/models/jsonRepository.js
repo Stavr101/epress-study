@@ -32,12 +32,12 @@ const createRepositories = (filePath) => {
       return null;
     }
     result[index] = { id, ...data };
-    await fs.writeFile(filePath, JSON.stringify(books, null, 2));
+    await fs.writeFile(filePath, JSON.stringify(result, null, 2));
     return result[index];
   };
 
   const deleteById = async (id) => {
-    const date = getAll();
+    const date = await getAll();
     const index = date.findIndex((item) => item.id === id);
     if (index === -1) {
       return null;
